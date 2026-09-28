@@ -1,7 +1,7 @@
 from .flights import create_flight_agent
 from .hotels import create_hotels_agent
 from .activities import create_activities_agent
-from itinerary import create_itinerary_agent
+from .itinerary import create_itinerary_agent
 
 __all__ = [
     "flights",

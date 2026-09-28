@@ -55,7 +55,7 @@ def search_flights(
         result = f"""
 * {flight['airline']} {flight['flight_number']} 
 Route: {flight['departure_city']} -> {flight['arrival_city']}  
-Departure: {flight['depature_time']} | Arrival: {flight['arrival_time']}
+Departure: {flight['departure_time']} | Arrival: {flight['arrival_time']}
 Duration: {flight['duration']} | Stops: {flight['stops']} {'(' + flight.get('layover', '') + ')' if flight.get('layover') else '(Direct)'}
 Price: $f{flight['price']} USD ({flight['class']})
                 """

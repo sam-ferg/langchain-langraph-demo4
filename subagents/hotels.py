@@ -42,7 +42,7 @@ def search_hotels(
     #filter by traveler type if specified
     if traveler_type:
         traveler_type_lower = traveler_type.lower()
-        hotels = [h for h in hotels if traveler_type_lower in h.get['traveler_type']]
+        hotels = [h for h in hotels if traveler_type_lower in h.get("traveler_type",[])]  
 
     if not hotels:
         return "No hotels match your criteria. Try adjusting your budget or preferences."
@@ -95,7 +95,7 @@ def get_hotel_recommendation(
     
     #filter by traveler type if specified
     traveler_type_lower = traveler_type.lower()
-    matching_hotels = [h for h in hotels if traveler_type_lower in h.get['traveler_type']]    
+    matching_hotels = [h for h in hotels if traveler_type_lower in h.get("traveler_type",[])]    
 
     if not matching_hotels:
         matching_hotels = hotels

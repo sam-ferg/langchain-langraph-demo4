@@ -60,7 +60,7 @@ def search_flights(request: str) -> str:
     """
     agents = get_agents()
 
-    result = agents["flight_agents"].invoke({
+    result = agents["flights_agent"].invoke({
         "messages": [{"role": "user", "content": request}]
     })
 
